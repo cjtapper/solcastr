@@ -41,4 +41,8 @@ Their names are pretty self explanatory; to find out what arguments are
 required, you're probably best off just opening solcast.R and having a look at
 their definitions, it's all pretty well documented!
 
+It should be noted that I haven't implemented any handling of the rate limiting,
+so you might get errors if you try to do more than 120 (at time of me writing
+this) requests within 1 minute.
+
 Have fun!
