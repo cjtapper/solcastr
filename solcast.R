@@ -47,7 +47,7 @@ GetPVPowerForecasts <- function(api.key, capacity, latitude, longitude, tilt=NUL
                          longitude=longitude, tilt=tilt, azimuth=azimuth, 
                          install_date=install.date, loss_factor=loss.factor)
 
-  df <- ReformatDataFrame(response)
+  df <- ReformatDataFrame(response, "forecasts")
 
   return(df)
 
@@ -83,7 +83,7 @@ GetPVPowerEstimatedActuals <- function(api.key, capacity, latitude, longitude,
                          longitude=longitude, tilt=tilt, azimuth=azimuth, 
                          install_date=install.date, loss_factor=loss.factor)
 
-  df <- ReformatDataFrame(response)
+  df <- ReformatDataFrame(response, "estimated_actuals")
 
   return(df)
 
@@ -105,7 +105,7 @@ GetRadiationForecasts <- function(api.key, latitude, longitude) {
 
   response <- SolcastGET(end.point, api.key, latitude=latitude, longitude=longitude)
 
-  df <- ReformatDataFrame(response)
+  df <- ReformatDataFrame(response, "forecasts")
 
   return(df)
 
@@ -131,17 +131,17 @@ GetRadiationEstimatedActuals <- function(api.key, latitude, longitude, latest=FA
 
   response <- SolcastGET(end.point, api.key, latitude=latitude, longitude=longitude)
 
-  df <- ReformatDataFrame(response)
+  df <- ReformatDataFrame(response, "estimated_actuals")
 
   return(df)
 
 }
 
 
-ReformatDataFrame <- function(response) {
+ReformatDataFrame <- function(response, data.field.name) {
 
   # Parse the JSON response into a dataframe
-  df <- tail(content(response, as='parsed', simplifyVector=TRUE), n=1)[[1]]
+  df <- content(response, as='parsed', simplifyVector=TRUE)[[data.field.name]]
 
   # Convert the period_end column from ISO8601 string and put in new column
   # 'gtms'
