@@ -1,15 +1,15 @@
-#solcastr
+# solcastr
 An R client library for the Solcast API. Solcast provides photovolatic power and
 solar radiation forecasting. More information can be found at
 [solcast.com.au](https://www.solcast.com.au)
 
 
-#Installaion
+# Installaion
 The package is available via CRAN. You can install using 
 `install.packages("solcast")`.
 
 
-#Usage
+# Usage
 `library("solcast")`
 
 After this, there should be four functions imported into your R environment that
