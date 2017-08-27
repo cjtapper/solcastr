@@ -4,7 +4,7 @@ solar radiation forecasting. More information can be found at
 [solcast.com.au](https://www.solcast.com.au)
 
 
-# Installaion
+# Installation
 The package is available via CRAN. You can install using 
 `install.packages("solcast")`.
 
