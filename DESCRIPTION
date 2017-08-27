@@ -1,0 +1,17 @@
+Package: solcast
+Title: A Client Library for the Solcast API
+Version: 0.0.2
+Authors@R: person("Chris", "Tapper", email = "cj.tapper@gmail.com",
+  role = c("aut", "cre"))
+Description: Provides wrapper functions for the httr library to access data from
+  Solcast. Solcast is a provider of photovoltaic power and solar radiation
+  forecasts. More information can be found at <https://solcast.com.au>.
+Depends: R (>= 3.0.0)
+Imports: httr
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1.9000
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr

@@ -1,0 +1,37 @@
+---
+title: "R Package for Solcast API"
+author: "Chris Tapper"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{R Package for Solcast API}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## Introduction
+
+Solcast delivers operational solar energy modelling and forecasting
+technologies, based on a fusion of unique and disparate data sources. They work
+directly with the energy industry to remove the uncertainty associated with
+behind the meter PV generation and large solar farms. Their data is global, with
+increased detail and update frequency in satellite coverage areas - currently
+Australia, North and Central America and East Asia.
+
+This package is an R wrapper for the Solcast API designed to allow simple access
+to Solcast's services from within the R ecosystem.
+
+## Getting Started
+
+You will require a Solcast account and API key. You can signup at
+<https://www.solcast.com.au/api/>.
+
+Next, install the Solcast R package by running:
+```r
+install.packages("solcast")
+```
+
+You can then source the package from within your project using:
+```r 
+library(solcast)
+```
